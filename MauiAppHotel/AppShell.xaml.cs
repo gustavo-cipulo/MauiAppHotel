@@ -1,4 +1,5 @@
-﻿namespace MauiAppHotel
+﻿
+namespace MauiAppHotel
 {
     public partial class AppShell : Shell
     {
