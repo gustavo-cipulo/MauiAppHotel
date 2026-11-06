@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="MauiAppHotel.Views.ContratacaoHospedagem"
+    Title="Contratação de Hospedagem"
+    BackgroundColor="#F1F5F9">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="20">
+
+            <Label
+                Text="HOTEL PREMIUM"
+                FontSize="30"
+                FontAttributes="Bold"
+                TextColor="#17365D"
+                HorizontalOptions="Center" />
+
+            <Label
+                Text="Planeje sua hospedagem"
+                FontSize="16"
+                TextColor="#64748B"
+                HorizontalOptions="Center" />
+
+            <Border
+                BackgroundColor="White"
+                Stroke="#DCE5EF"
+                StrokeThickness="1"
+                StrokeShape="RoundRectangle 18"
+                Padding="20">
+
+                <VerticalStackLayout Spacing="18">
+
+                    <Label
+                        Text="Cálculo da Diária"
+                        FontSize="24"
+                        FontAttributes="Bold"
+                        TextColor="#17365D" />
+
+                    <Grid
+                        ColumnDefinitions="*,Auto,Auto"
+                        RowDefinitions="Auto,Auto"
+                        RowSpacing="15"
+                        ColumnSpacing="12">
+
+                        <Label
+                            Text="Adultos:"
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            VerticalOptions="Center"
+                            TextColor="#334155" />
+
+                        <Label
+                            Grid.Row="0"
+                            Grid.Column="1"
+                            Text="{Binding Value}"
+                            BindingContext="{x:Reference stp_adultos}"
+                            VerticalOptions="Center"
+                            TextColor="#2563EB"
+                            FontAttributes="Bold" />
+
+                        <Stepper
+                            x:Name="stp_adultos"
+                            Grid.Row="0"
+                            Grid.Column="2"
+                            Minimum="0"
+                            Maximum="10"
+                            Increment="1"
+                            Value="1" />
+
+                        <Label
+                            Text="Crianças:"
+                            Grid.Row="1"
+                            Grid.Column="0"
+                            VerticalOptions="Center"
+                            TextColor="#334155" />
+
+                        <Label
+                            Grid.Row="1"
+                            Grid.Column="1"
+                            Text="{Binding Value}"
+                            BindingContext="{x:Reference stp_criancas}"
+                            VerticalOptions="Center"
+                            TextColor="#2563EB"
+                            FontAttributes="Bold" />
+
+                        <Stepper
+                            x:Name="stp_criancas"
+                            Grid.Row="1"
+                            Grid.Column="2"
+                            Minimum="0"
+                            Maximum="10"
+                            Increment="1" />
+                    </Grid>
+
+                    <Label
+                        Text="Escolha sua suíte"
+                        FontAttributes="Bold"
+                        TextColor="#17365D" />
+
+                    <Picker
+                        x:Name="pck_quarto"
+                        Title="Selecione sua acomodação"
+                        TextColor="#334155">
+                        <Picker.Items>
+                            <x:String>Suíte Standard</x:String>
+                            <x:String>Suíte Luxo</x:String>
+                            <x:String>Suíte Premium</x:String>
+                        </Picker.Items>
+                    </Picker>
+
+                    <Border
+                        BackgroundColor="#F8FAFC"
+                        Stroke="#E2E8F0"
+                        StrokeShape="RoundRectangle 12"
+                        Padding="15">
+
+                        <VerticalStackLayout Spacing="12">
+
+                            <Label
+                                Text="Período da Estadia"
+                                FontSize="18"
+                                FontAttributes="Bold"
+                                TextColor="#17365D" />
+
+                            <Label
+                                Text="Check-in"
+                                TextColor="#475569" />
+
+                            <DatePicker
+                                x:Name="dtpck_checkin"
+                                Format="dd/MM/yyyy"
+                                TextColor="#17365D" />
+
+                            <Label
+                                Text="Check-out"
+                                TextColor="#475569" />
+
+                            <DatePicker
+                                x:Name="dtpck_checkout"
+                                Format="dd/MM/yyyy"
+                                TextColor="#17365D" />
+
+                        </VerticalStackLayout>
+                    </Border>
+
+                </VerticalStackLayout>
+            </Border>
+
+            <Button
+                Text="AVANÇAR"
+                BackgroundColor="#2563EB"
+                TextColor="White"
+                CornerRadius="12"
+                HeightRequest="55"
+                FontAttributes="Bold"
+                Clicked="Avancar_Clicked" />
+
+            <Button
+                Text="SOBRE O APLICATIVO"
+                BackgroundColor="#17365D"
+                TextColor="White"
+                CornerRadius="12"
+                HeightRequest="50"
+                Clicked="Sobre_Clicked" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="MauiAppHotel.Views.Sobre"
+    Title="Sobre"
+    BackgroundColor="#F1F5F9">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="25"
+            Spacing="20"
+            VerticalOptions="Center">
+
+            <Label
+                Text="SOBRE O APLICATIVO"
+                FontSize="28"
+                FontAttributes="Bold"
+                TextColor="#17365D"
+                HorizontalOptions="Center" />
+
+            <Border
+                BackgroundColor="White"
+                Stroke="#DCE5EF"
+                StrokeShape="RoundRectangle 20"
+                Padding="25">
+
+                <VerticalStackLayout Spacing="18">
+
+                    <Label
+                        Text="HOTEL PREMIUM"
+                        FontSize="25"
+                        FontAttributes="Bold"
+                        TextColor="#2563EB"
+                        HorizontalOptions="Center" />
+
+                    <Label
+                        Text="Sistema de Hospedagem"
+                        FontSize="18"
+                        HorizontalOptions="Center"
+                        TextColor="#475569" />
+
+                    <BoxView
+                        HeightRequest="1"
+                        Color="#E2E8F0" />
+
+                    <Label
+                        Text="Desenvolvedor"
+                        FontAttributes="Bold"
+                        TextColor="#17365D" />
+
+                    <Label
+                        Text="Gustavo Cipulo Almeida Batista da Silva"
+                        TextColor="#334155" />
+
+                    <Label
+                        Text="Ano de Desenvolvimento"
+                        FontAttributes="Bold"
+                        TextColor="#17365D" />
+
+                    <Label
+                        Text="2026"
+                        TextColor="#334155" />
+
+                    <Label
+                        Text="Tecnologias Utilizadas"
+                        FontAttributes="Bold"
+                        TextColor="#17365D" />
+
+                    <Label
+                        Text="C# e .NET MAUI (XAML)"
+                        TextColor="#334155" />
+
+                    <Label
+                        Text="Descrição"
+                        FontAttributes="Bold"
+                        TextColor="#17365D" />
+
+                    <Label
+                        Text="Aplicativo desenvolvido para simular a contratação de hospedagens, permitindo selecionar hóspedes, acomodação e período da estadia."
+                        TextColor="#475569"
+                        LineBreakMode="WordWrap" />
+
+                </VerticalStackLayout>
+            </Border>
+
+            <Button
+                Text="VOLTAR"
+                BackgroundColor="#17365D"
+                TextColor="White"
+                CornerRadius="12"
+                HeightRequest="50"
+                Clicked="Voltar_Clicked" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
