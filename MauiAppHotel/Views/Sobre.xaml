@@ -112,11 +112,6 @@
                         TextColor="#475569"
                         LineBreakMode="WordWrap" />
 
-                    <Label
-                        Text="Programação Mobile I — Agenda 14"
-                        FontSize="13"
-                        TextColor="#64748B" />
-
                 </VerticalStackLayout>
             </Border>
 
